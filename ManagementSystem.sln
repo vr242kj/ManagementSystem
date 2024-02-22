@@ -7,21 +7,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F9FB28FF-DDF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{59A80071-A893-48BD-95FF-D6E63F5679B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Core", "ManagementSystem.Core\ManagementSystem.Core.csproj", "{3D74295A-A4E2-4AC1-BC1A-5DD4ECAE2031}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Core", "src\ManagementSystem.Core\ManagementSystem.Core.csproj", "{3D74295A-A4E2-4AC1-BC1A-5DD4ECAE2031}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Application", "ManagementSystem.Application\ManagementSystem.Application.csproj", "{09DB796F-239D-4A13-B3AF-E16FFCC69DBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Application", "src\ManagementSystem.Application\ManagementSystem.Application.csproj", "{09DB796F-239D-4A13-B3AF-E16FFCC69DBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Infrastructure.Data", "ManagementSystem.Infrastructure.Data\ManagementSystem.Infrastructure.Data.csproj", "{28EA0669-F900-4E48-A82D-71884AE58539}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Infrastructure.Data", "src\ManagementSystem.Infrastructure.Data\ManagementSystem.Infrastructure.Data.csproj", "{28EA0669-F900-4E48-A82D-71884AE58539}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Infrastructure", "ManagementSystem.Infrastructure\ManagementSystem.Infrastructure.csproj", "{54CEEC30-D461-499E-87E5-ACEAB9BFC51B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Infrastructure", "src\ManagementSystem.Infrastructure\ManagementSystem.Infrastructure.csproj", "{54CEEC30-D461-499E-87E5-ACEAB9BFC51B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Shared", "ManagementSystem.Shared\ManagementSystem.Shared.csproj", "{C38CF722-A978-4EE1-8C07-EDFEDFC2344A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.Shared", "src\ManagementSystem.Shared\ManagementSystem.Shared.csproj", "{C38CF722-A978-4EE1-8C07-EDFEDFC2344A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.WebUI", "ManagementSystem.WebUI\ManagementSystem.WebUI.csproj", "{409A0642-19A6-4FA9-896B-C860B314957E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.WebUI", "src\ManagementSystem.WebUI\ManagementSystem.WebUI.csproj", "{409A0642-19A6-4FA9-896B-C860B314957E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.WebAPI", "ManagementSystem.WebAPI\ManagementSystem.WebAPI.csproj", "{0D62F9D9-2798-4352-851D-9EB19A6A21BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.WebAPI", "src\ManagementSystem.WebAPI\ManagementSystem.WebAPI.csproj", "{0D62F9D9-2798-4352-851D-9EB19A6A21BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.IdentityServer", "ManagementSystem.IdentityServer\ManagementSystem.IdentityServer.csproj", "{13D32DC7-9924-45FD-969F-52783B3CB61C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementSystem.IdentityServer", "src\ManagementSystem.IdentityServer\ManagementSystem.IdentityServer.csproj", "{13D32DC7-9924-45FD-969F-52783B3CB61C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
