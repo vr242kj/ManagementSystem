@@ -7,8 +7,8 @@ namespace ManagementSystem.Core.Entities
     {
         public int Id { get; set; }
         public string Title { get; set; } = null!;
-        public string Description { get; set; } = null!;
-        public string Type { get; set; } = null!;
+        public string? Description { get; set; }
+        public string? Type { get; set; }
         public DateTime Deadline { get; set; }
         public string ClassOfPriority { get; set; } = null!;
 

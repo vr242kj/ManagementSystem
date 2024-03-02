@@ -7,7 +7,7 @@ namespace ManagementSystem.Core.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public string SureName { get; set; } = null!;
+        public string Surename { get; set; } = null!;
         public DateTime? DateOfBirth { get; set; }
         public string Email { get; set; } = null!;
         public string Password { get; set; } = null!;
