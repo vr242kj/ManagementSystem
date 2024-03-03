@@ -1,11 +1,13 @@
 ﻿using ManagementSystem.Core.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Task = ManagementSystem.Core.Entities.Task;
 
 namespace ManagementSystem.Infrastructure.Data.Migrations
 {
-    public class CrmDbContext : DbContext
+    public class CrmDbContext : IdentityDbContext
     {
+        public static string Schema { get; } = "application";
         public CrmDbContext(DbContextOptions options) : base(options) { }
         public CrmDbContext() { }
         public DbSet<Case> Cases { get; set; }
@@ -20,6 +22,8 @@ namespace ManagementSystem.Infrastructure.Data.Migrations
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CrmDbContext).Assembly);
 
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.HasDefaultSchema(Schema);
         }
     }
 }

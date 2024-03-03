@@ -9,10 +9,8 @@ namespace ManagementSystem.Infrastructure.Data.EntityTypeConfiguration
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.Property(p => p.Name).IsRequired();
-            builder.Property(p => p.Surename).IsRequired();
+            builder.Property(p => p.Surname).IsRequired();
             builder.Property(p => p.Email).IsRequired();
-            builder.Property(p => p.Password).IsRequired();
-            builder.Property(p => p.Role).IsRequired();
         }
     }
 }

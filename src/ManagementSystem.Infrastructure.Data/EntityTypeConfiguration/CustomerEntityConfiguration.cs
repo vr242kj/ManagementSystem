@@ -9,7 +9,7 @@ namespace ManagementSystem.Infrastructure.Data.EntityTypeConfiguration
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
             builder.Property(p => p.Name).IsRequired();
-            builder.Property(p => p.Surename).IsRequired();
+            builder.Property(p => p.Surname).IsRequired();
             builder.Property(p => p.Email).IsRequired();
             builder.Property(p => p.Status).IsRequired();
         }

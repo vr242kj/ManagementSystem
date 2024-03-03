@@ -1,4 +1,7 @@
 using ManagementSystem.Infrastructure.Data;
+using ManagementSystem.Infrastructure.Data.Migrations;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace ManagementSystem.WebUI
 {
@@ -10,7 +13,20 @@ namespace ManagementSystem.WebUI
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddStorage(builder.Configuration);
+            //builder.Services.AddStorage(builder.Configuration);
+
+            string dbConnectionString = builder.Configuration.GetConnectionString("LocalDbSqlServer");
+
+            builder.Services.AddDbContext<CrmDbContext>(options => options.UseSqlServer(dbConnectionString));
+
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<CrmDbContext>();
+
+            builder.Services.AddDataService(dbConnectionString);
+
+
+
+            //builder.Services.AddIdentityDataServices(dbConnectionString);
+
 
             var app = builder.Build();
 
