@@ -15,7 +15,7 @@ namespace ManagementSystem.Core.Entities
         public int UserId { get; set; } 
         public User User { get; set; } = null!;
         public int CaseId { get; set; }
-        public User Case { get; set; } = null!;
+        public Case Case { get; set; } = null!;
         public ICollection<Comment> Comments { get; } = new List<Comment>();
     }
 }
