@@ -2,6 +2,7 @@ using ManagementSystem.Infrastructure.Data;
 using ManagementSystem.Infrastructure.Data.Migrations;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 namespace ManagementSystem.WebUI
 {
@@ -12,16 +13,20 @@ namespace ManagementSystem.WebUI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            //builder.Services.AddControllersWithViews();
             //builder.Services.AddStorage(builder.Configuration);
+
 
             string dbConnectionString = builder.Configuration.GetConnectionString("LocalDbSqlServer");
 
             builder.Services.AddDbContext<CrmDbContext>(options => options.UseSqlServer(dbConnectionString));
+            //builder.Services.AddDataService(dbConnectionString);
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<CrmDbContext>();
 
-            builder.Services.AddDataService(dbConnectionString);
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<CrmDbContext>()
+                .AddDefaultTokenProviders();
 
 
 
@@ -40,6 +45,8 @@ namespace ManagementSystem.WebUI
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.MapRazorPages();
 
             app.UseRouting();
 

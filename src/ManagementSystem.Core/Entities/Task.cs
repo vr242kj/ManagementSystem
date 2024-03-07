@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.AspNetCore.Identity;
+
 namespace ManagementSystem.Core.Entities
 {
     public class Task
@@ -10,8 +12,8 @@ namespace ManagementSystem.Core.Entities
         public DateTime Deadline { get; set; }
         public string ClassOfPriority { get; set; } = null!;
 
-        public int UserId { get; set; } 
-        public User User { get; set; } = null!;
+        public string UserId { get; set; } 
+        public IdentityUser User { get; set; }
         public int CaseId { get; set; }
         public Case Case { get; set; } = null!;
         public ICollection<Comment> Comments { get; } = new List<Comment>();

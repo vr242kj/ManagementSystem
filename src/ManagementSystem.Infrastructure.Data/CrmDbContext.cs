@@ -1,14 +1,14 @@
 ﻿using ManagementSystem.Core.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Task = ManagementSystem.Core.Entities.Task;
 
 namespace ManagementSystem.Infrastructure.Data.Migrations
 {
-    public class CrmDbContext : IdentityDbContext
+    public class CrmDbContext : IdentityDbContext<IdentityUser>
     {
-        public static string Schema { get; } = "application";
-        public CrmDbContext(DbContextOptions options) : base(options) { }
+        public CrmDbContext(DbContextOptions<CrmDbContext> options) : base(options) { }
         public CrmDbContext() { }
         public DbSet<Case> Cases { get; set; }
         public DbSet<Comment> Comments  { get; set; }
@@ -19,11 +19,9 @@ namespace ManagementSystem.Infrastructure.Data.Migrations
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CrmDbContext).Assembly);
-
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.HasDefaultSchema(Schema);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CrmDbContext).Assembly);
         }
     }
 }
